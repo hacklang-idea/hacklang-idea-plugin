@@ -1,0 +1,16 @@
+{
+parserClass="org.hacklangidea.parser.HackParser"
+extends="com.intellij.extapi.psi.ASTWrapperPsiElement"
+psiClassPrefix="Hack"
+psiImplClassSuffix="Impl"
+psiPackage="org.hacklangidea.psi"
+psiImplPackage="org.hacklangidea.psi.impl"
+
+elementTypeHolderClass="org.hacklangidea.psi.HackTypes"
+elementTypeClass="org.hacklangidea.psi.HackElementType"
+tokenTypeClass="org.hacklangidea.psi.HackTokenType"
+}
+
+hackFile ::= item_*
+
+private item_ ::= (T_EXIT|T_COMMENT)
